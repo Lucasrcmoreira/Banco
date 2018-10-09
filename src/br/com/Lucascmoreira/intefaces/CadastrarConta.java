@@ -5,8 +5,9 @@
  */
 package br.com.Lucascmoreira.intefaces;
 
-import banco.Banco;
-import banco.ContaBancaria;
+
+import br.com.lucasrcmoreira.banco.Banco;
+import br.com.lucasrcmoreira.banco.ContaBancaria;
 import javax.swing.JOptionPane;
 
 /**

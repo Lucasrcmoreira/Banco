@@ -62,6 +62,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
 
         jButton4.setText("sacar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("Contar contas");
 
@@ -136,6 +141,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
        tela.setVisible(true);
         
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+         TelaSacar ts =new TelaSacar(banco);
+        
+            ts.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
