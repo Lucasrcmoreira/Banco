@@ -26,7 +26,40 @@ public class Banco {
             }
             return contaEncontrada;
         }
+                
+        public int contarContaSaldoMin(double valor){
+            int	quantidade  =  0;	
+                    for(int i=0; i<lista.size(	);i++){	
+                    ContaBancaria b = lista.get(i);	
+                    if(b.getSaldo()>= valor){	
+                        quantidade +=  1;	
+                    }							
+                }
+            return quantidade;
+        }
+        public int contarContaSaldoMax(double valor){
+            int	quantidade  =  0;	
+                    for(int i=0; i<lista.size(	);i++){	
+                    ContaBancaria b = lista.get(i);	
+                    if(b.getSaldo()<= valor){	
+                        quantidade +=  1;	
+                    }							
+                }
+            return quantidade;
+        }
+        
+        public ContaBancaria consultaContaSaldoMaximo() {
+        ContaBancaria contaMaiorSaldo = lista.get(0);
 
+        for (int i = 0; i < lista.size(); i++) {
+            ContaBancaria conta = lista.get(i);
+            if (conta.getSaldo() > contaMaiorSaldo.getSaldo()) {
+                contaMaiorSaldo = conta;
+            }
+        }
+
+        return contaMaiorSaldo;
+    }
     }
 
 

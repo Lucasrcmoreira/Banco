@@ -15,10 +15,12 @@ public class ContaBancaria {
     private double saldo;
     private int numero;
     private int senha;
+    private String nome;
 
-    public ContaBancaria(int numero, int senha) {
+    public ContaBancaria(int numero, int senha,String nome) {
         this.numero = numero;
         this.senha = senha;
+        this.nome = nome;
     }
 
     public void depositar(double valor) {
@@ -38,6 +40,7 @@ public class ContaBancaria {
         //colocando na conta destino
         contaDestino.saldo = contaDestino.saldo + valor;
     }
+    
 
     public double getSaldo() {
         return saldo;
@@ -49,6 +52,10 @@ public class ContaBancaria {
 
     public int getSenha() {
         return senha;
+    }
+    
+    public String getNome(){
+        return nome;
     }
 
 }
